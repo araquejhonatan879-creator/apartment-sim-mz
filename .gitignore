@@ -1,1 +1,73 @@
+# ============================================================
+# APARTMENT SIM MZ — .gitignore
+# ============================================================
 
+# --- RPG Maker MZ ---
+# Saves del juego — nunca al repo
+save/
+*.rpgsave
+
+# Deployment/build del juego — solo el proyecto fuente va al repo
+deployment/
+
+# Archivos temporales del editor
+*.rpgproject.bak
+
+# --- Node / JavaScript ---
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# --- Sistema operativo ---
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# --- Editores ---
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# --- Stable Diffusion / Arte ---
+# Archivos temporales de generación — no van al repo
+*.png.bak
+*_wip.*
+*_draft.*
+*_test.*
+
+# Carpeta de pruebas de arte — solo van los assets aprobados
+img/wip/
+img/test/
+img/drafts/
+
+# --- Debug ---
+# Nunca subir con DEBUG_MODE activo — esto es un recordatorio,
+# no previene el commit (el dev es responsable de revisarlo)
+# AptSim.DEBUG_MODE debe ser false antes de cualquier commit
+
+# --- Lo que SÍ va al repo ---
+# docs/          ← GDDs y documentación
+# _dev/          ← estados actuales y prompts de devs (CRÍTICO — no ignorar)
+# js/custom/     ← todo el código JS del proyecto
+# img/           ← assets aprobados (excepto wip/ test/ drafts/)
+# audio/         ← música y efectos
+# data/          ← archivos JSON del engine (solo los modifica el editor)
+# index.html     ← punto de entrada del juego web
+# package.json   ← dependencias si aplica
